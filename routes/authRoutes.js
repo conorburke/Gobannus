@@ -13,5 +13,9 @@ module.exports = (app) => {
     //handle request after user authorizes Gobannus to use google account
     //passprt sees code inside url and can handle it
     app.get('/auth/google/callback', passport.authenticate('google'));
+
+    app.get('/api/current_user', (req, res) => {
+        res.send(req.user)
+    })
 };
 
