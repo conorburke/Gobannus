@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { Navbar } from 'react-bootstrap';
 
 import Header from './Header';
 
@@ -13,7 +14,9 @@ export default class App extends Component {
             <div>
                 <BrowserRouter>
                     <div>
-                        <Header />
+                        <Navbar>
+                            <Header />
+                        </Navbar>
                         <Route exact path='/' component={Landing} />
                         <Route exact path='/tools' component={Dashboard} />
                         <Route path='/tools/new' component={Form} />
