@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 
+import * as actions from '../actions';
 import Header from './Header';
+import Landing from './Landing';
 
-const Landing = () => <h2>Landing</h2>
 const Dashboard = () => <h2>Dashboard</h2>
 const Form = () => <h2>Form</h2>
 
-export default class App extends Component {
+class App extends Component {
+    componentDidMount() {
+        this.props.fetchUser();
+    }
+
     render() {
         return (
             <div>
@@ -23,3 +29,5 @@ export default class App extends Component {
         ); 
     }
 }
+
+export default connect(null, actions)(App);
