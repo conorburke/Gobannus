@@ -13,10 +13,10 @@ module.exports = (app) => {
     });
 
     app.post('/api/tools', (req, res) => {
-        console.log(req.body.tool);
+        // console.log(req.body.tool);
         console.log(req);
         new Tool({type: req.body.tool, owner: req.user._id}).save();
-        res.redirect('/tools');
+        // res.redirect('/tools');
     });
 
 };

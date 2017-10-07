@@ -38,7 +38,7 @@ class Header extends Component {
                         <Nav>
                             <IndexLinkContainer to='/tools#'>
                                 <NavItem >
-                                    Dashboard
+                                    Tools
                                 </NavItem>
                             </IndexLinkContainer>
                             <LinkContainer to='/tools/new'>

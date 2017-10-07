@@ -16,7 +16,7 @@ class Tools extends Component {
             console.log(res.data);
             this.setState({tools: res.data});
             console.log(this.state.tools);
-        });
+        })
         // console.log(tools);
     }
     
