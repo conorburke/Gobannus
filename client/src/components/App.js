@@ -5,9 +5,11 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import * as actions from '../actions';
 import Header from './Header';
 import Landing from './Landing';
+import ToolForm from './ToolForm';
+import Tools from './Tools';
 
-const Dashboard = () => <h2>Dashboard</h2>
-const Form = () => <h2>Form</h2>
+// const Dashboard = () => <h2>Dashboard</h2>
+// const Form = () => <h2>Form</h2>
 
 class App extends Component {
     componentDidMount() {
@@ -21,8 +23,8 @@ class App extends Component {
                     <div>
                         <Header />
                         <Route exact path='/' component={Landing} />
-                        <Route exact path='/tools' component={Dashboard} />
-                        <Route path='/tools/new' component={Form} />
+                        <Route exact path='/tools' component={Tools} />
+                        <Route exact path='/tools/new' component={ToolForm} />
                     </div>
                 </BrowserRouter>
             </div>
