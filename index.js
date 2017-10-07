@@ -3,9 +3,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const bodyParser = require('body-parser');
 
 //need to load schema before running passport code that creates model instance
 require('./models/User');
+require('./models/Tool');
 
 //just need to require as we're not invoking anything
 require('./services/passport');
@@ -33,8 +35,13 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-//immediately invoke auth routes
+//for post requests
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
+//immediately invoke routes
 require('./routes/authRoutes')(app);
+require('./routes/toolRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
 	//express will serve up production assets
