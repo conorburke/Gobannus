@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import * as actions from '../actions';
 import Header from './Header';
+import Footer from './Footer'
 import Landing from './Landing';
 import ToolForm from './ToolForm';
 import Tools from './Tools';
@@ -20,11 +21,12 @@ class App extends Component {
         return (
             <div>
                 <BrowserRouter>
-                    <div>
+                    <div style={{height: '100vh', overflow: 'hidden'}}>
                         <Header />
                         <Route exact path='/' component={Landing} />
                         <Route exact path='/tools' component={Tools} />
                         <Route exact path='/tools/new' component={ToolForm} />
+                        <Footer />
                     </div>
                 </BrowserRouter>
             </div>
