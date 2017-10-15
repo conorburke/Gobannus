@@ -11,7 +11,9 @@ export default class Landing extends Component {
                     <h1>Welcome to Gobannus</h1>
                 </div>
                 <div style={{display: 'flex', flexDirection: 'row'}} >
-                    <img src={smithGod} alt='Celtic God of Smiths' style={{height: 'auto', maxWidth: '60%', border: '5px solid black'}}/>
+                    <div style={{display: 'flex', flexDirection: 'row', maxHeight: 480}}>
+                        <img src={smithGod} alt='Celtic God of Smiths' style={{height: 'auto', maxWidth: 'auto', border: '5px solid black'}}/>
+                    </div>
                     <div style={{textAlign: 'center', width: '40%'}}>
                         {/* <h3>Gobannus is a one-stop shop for renting tools</h3>
                         <ul style={{display: 'block'}}>

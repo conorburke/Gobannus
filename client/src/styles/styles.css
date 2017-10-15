@@ -1,13 +1,22 @@
 body {
-    background-color: #DCDCDC
+    background-color: #DCDCDC;
 }
 
 footer {
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    height:20px;
-    width:100%;
-    background:#fff;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 20px;
+    width: 100%;
+    background: #fff;
     text-align: right;
+    margin-top: 20px;
+ }
+
+ img:hover {
+     filter: grayscale(100%);
+ }
+ 
+ img {
+     transition: filter 2s ease-in 50ms;
  }
