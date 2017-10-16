@@ -38,12 +38,12 @@ class Header extends Component {
                         <Nav>
                             <IndexLinkContainer to='/tools#'>
                                 <NavItem >
-                                    Tools
+                                    My Tools
                                 </NavItem>
                             </IndexLinkContainer>
                             <LinkContainer to='/tools/new'>
                                 <NavItem >
-                                    Form
+                                    Add Tool
                                 </NavItem>
                             </LinkContainer>
                         </Nav>
