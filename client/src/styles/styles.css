@@ -10,8 +10,32 @@ footer {
     width: 100%;
     background: #fff;
     text-align: right;
-    margin-top: 20px;
  }
+
+#main {
+    height: 100vh;
+}
+
+#landing-div {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    text-align: center;
+    margin-top: -20px;
+    max-height: 85vh;
+}
+
+#welcome-header {
+    flex-basis: 20%;
+}
+
+#landing-content {
+    display: flex;
+    flex-direction: row;
+    /* max-height: 480px; */
+    flex-basis: 80%;
+    justify-content: space-around;
+}
 
  img:hover {
      filter: grayscale(100%);

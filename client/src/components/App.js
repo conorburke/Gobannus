@@ -21,7 +21,7 @@ class App extends Component {
         return (
             <div>
                 <BrowserRouter>
-                    <div style={{height: '100vh', overflow: 'hidden'}}>
+                    <div id='main'>
                         <Header />
                         <Route exact path='/' component={Landing} />
                         <Route exact path='/tools' component={Tools} />
