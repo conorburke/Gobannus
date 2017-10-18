@@ -25,7 +25,6 @@ class Header extends Component {
     render() {
         console.log(this.props);
         return (
-            <div>
                 <Navbar collapseOnSelect>
                     <Navbar.Header>
                         <Navbar.Brand>
@@ -52,7 +51,6 @@ class Header extends Component {
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
-            </div>
         )
     }
 }
